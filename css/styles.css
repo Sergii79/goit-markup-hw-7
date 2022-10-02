@@ -296,6 +296,10 @@ ul {
     margin-left: 10px;
 }
 
+.button--width-modal {
+    width: 200px;
+}
+
 /* benefits */
 
 .benefits {    
@@ -595,7 +599,7 @@ ul {
     visibility: hidden;    
 }
 
-.modal {    
+.backdrop__modal {    
     position: absolute;     
     top: 50%;
     left: 50%;   
@@ -607,7 +611,7 @@ ul {
     background-color: var(--main-background-color);
 }
 
-.modal-button {
+.backdrop__button {
     position: absolute;
     top: 8px;
     right: 8px;    
@@ -623,20 +627,22 @@ ul {
     cursor: pointer;
 }
 
-.modal-button:hover,
-.modal-button:focus {
-    color: var(--accent-text-color);
+.backdrop__button:hover .backdrop__icon,
+.backdrop__button:focus .backdrop__icon {
+    fill: var(--accent-text-color);
 
-    transition-property: color;
+    transition-property: fill;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 }
 
-.register-form {
+/* backdrop-register */
+
+.backdrop-register {
     padding: 40px;
 }
 
-.register-form-title {
+.backdrop-register__title {
     display: block;   
     font-weight: 700;
     font-size: 20px;
@@ -647,21 +653,21 @@ ul {
     margin-bottom: 12px;
 }
 
-.register-form-group {
+.backdrop-register__group {
     margin-bottom: 20px;
 }
 
-.label-form-group {
+.backdrop-register__label {
     display: block;   
     margin-bottom: 10px;
     position: relative;
 }
 
-.label-form-marggin {
+.backdrop-register__label--marggin {
     margin: 0;
 }
 
-.label-form-title {
+.backdrop-register__subject {
     display: block;
     margin-bottom: 4px;
     font-size: 12px;
@@ -669,7 +675,7 @@ ul {
     letter-spacing: 0.01em;
 }
 
-.input-form-group {  
+.backdrop-register__input {  
     width: 100%;  
     height: 40px;   
     padding: 12px 42px;     
@@ -677,13 +683,20 @@ ul {
     border-radius: 4px;
     outline: transparent; 
      
-
     transition-property: border;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 }
 
-.register-form-icon {
+.backdrop-register__input:focus {
+    border: 1px solid var(--accent-text-color);
+}
+
+.backdrop-register__input:focus + .backdrop-register__icon {
+    fill: var(--accent-text-color);
+}
+
+.backdrop-register__icon {
     position: absolute;    
     top: 70%;
     left: 15px;
@@ -691,19 +704,10 @@ ul {
     
     transition-property: fill;
     transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
-    
+    transition-timing-function: var(--transition-timing-function);    
 }
 
-.input-form-group:focus {
-    border: 1px solid var(--accent-text-color);
-}
-
-.input-form-group:focus + .register-form-icon {
-    fill: var(--accent-text-color);
-}
-
-.textarea-form-title {
+.backdrop-register__textarea {
     display: block;
     resize: none;
     width: 100%;
@@ -721,15 +725,15 @@ ul {
     transition-timing-function: var(--transition-timing-function);
 }
 
-.textarea-form-title::placeholder {
+.backdrop-register__textarea::placeholder {
     color: #75757580;
 }
 
-.textarea-form-title:focus {
+.backdrop-register__textarea:focus {
     border: 1px solid var(--accent-text-color);
 }
 
-.label-form-register {
+.backdrop-register__box {
     display: flex;
     align-items: center;
     justify-content: center;   
@@ -737,7 +741,25 @@ ul {
     gap: 7px;
 }
 
-.lead-form-title {
+.backdrop-register__checked {
+    opacity: 1;
+    transform: opacity var(--transition-duration);
+}
+
+.backdrop-register__checkbox:checked+.backdrop-register__checkbox-icon .backdrop-register__checked {
+    opacity: 0;
+}
+
+.backdrop-register__unchecked {
+    opacity: 0;
+    transition-duration: var(--transition-duration);
+}
+
+.backdrop-register__checkbox:checked+.backdrop-register__checkbox-icon .backdrop-register__unchecked {
+    opacity: 1;
+}
+
+.backdrop-register__heading {
 
     font-size: 14px;
     line-height: 24px;
@@ -745,37 +767,9 @@ ul {
     user-select: none;
 }
 
-.link-form-doc {
+.backdrop-register__doc {
     text-decoration-line: underline;    
     color: var(--accent-text-color);
-}
-
-.icon-checked {
-    opacity: 1;    
-    transform: opacity var(--transition-duration);
-}
-
-.register-form-checkbox:checked + 
-.register-form-icons .icon-checked {
-    opacity: 0;
-}
-
-.icon-unchecked {
-    opacity: 0;
-    transition-duration: var(--transition-duration);
-}
-
-.register-form-checkbox:checked +
-.register-form-icons .icon-unchecked {
-    opacity: 1;
-}
-
-.button-modal {    
-    width: 200px;    
-}
-
-.send-icon {
-    margin-left: 10px;
 }
 
 /**
