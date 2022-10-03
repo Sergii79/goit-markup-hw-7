@@ -1,0 +1,136 @@
+/* backdrop-register */
+
+.backdrop-register {
+    padding: 40px;
+}
+
+.backdrop-register__title {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+}
+
+.backdrop-register__group {
+    margin-bottom: 20px;
+}
+
+.backdrop-register__label {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.backdrop-register__label--marggin {
+    margin: 0;
+}
+
+.backdrop-register__subject {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+}
+
+.backdrop-register__input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 42px;
+    border: 1px solid var(--modal-label-border-20);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition-property: border;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &:focus {
+        border: 1px solid var(--accent-text-color);
+    }
+    
+    &:focus+.backdrop-register__icon {
+        fill: var(--accent-text-color);
+    }
+}
+
+.backdrop-register__icon {
+    position: absolute;
+    top: 70%;
+    left: 15px;
+    transform: translateY(-70%);
+
+    transition-property: fill;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
+
+.backdrop-register__textarea {
+    display: block;
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    outline: transparent;
+    border: 1px solid var(--modal-label-border-20);
+    border-radius: 4px;
+
+    transition-property: border;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &::placeholder {
+        color: #75757580;
+    }
+    
+    &:focus {
+        border: 1px solid var(--accent-text-color);
+    }
+}
+
+.backdrop-register__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 7px;
+}
+
+.backdrop-register__checked {
+    opacity: 1;
+    transform: opacity var(--transition-duration);
+    
+}
+
+.backdrop-register__checkbox:checked+.backdrop-register__checkbox-icon .backdrop-register__checked {
+    opacity: 0;
+}
+
+.backdrop-register__unchecked {
+    opacity: 0;
+    transition-duration: var(--transition-duration);
+}
+
+.backdrop-register__checkbox:checked+.backdrop-register__checkbox-icon .backdrop-register__unchecked {
+    opacity: 1;
+}
+
+.backdrop-register__heading {
+
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    user-select: none;
+}
+
+.backdrop-register__doc {
+    text-decoration-line: underline;
+    color: var(--accent-text-color);
+}

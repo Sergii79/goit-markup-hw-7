@@ -1,0 +1,29 @@
+/* adress */
+
+.adress {
+    margin-top: 20px;
+}
+
+.adress__list {
+    display: flex;
+    gap: 9px;
+    flex-direction: column;
+    font-style: normal;
+    list-style: none;
+}
+
+.adress__item {
+    height: 21px;
+}
+
+.adress__link-light,
+.adress__link-dark {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+}
+
+.adress__link-dark {
+    color: rgba(255, 255, 255, 0.6);
+}

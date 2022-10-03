@@ -1,0 +1,34 @@
+/* work */
+
+.work {
+    display: flex;
+    padding-left: 0px;
+    margin: 0;
+    gap: 30px;
+}
+
+.work__item {
+    position: relative;
+}
+
+.work__box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--banner-background-color-80);
+    width: 370px;
+    height: 70px;
+}
+
+.work__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}

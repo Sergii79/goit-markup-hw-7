@@ -1,0 +1,22 @@
+/* footer */
+
+.footer {
+    padding: 60px 0;
+    background-color: var(--banner-background-color);
+}
+
+.footer__left-part {
+    flex-grow: 1;
+    margin-right: 70px;
+}
+
+.footer__title {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}

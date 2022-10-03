@@ -1,0 +1,45 @@
+/* register-email */
+
+.register-email {
+    margin-left: 93px;
+}
+
+.register-email__title {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+.register-email__box {
+    display: flex;
+}
+
+.register-email__label {
+    margin-right: 12px;
+}
+
+.register-email__input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid #FFFFFF4D;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 15px 16px;
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        letter-spacing: 0.03em;
+        color: #FFFFFF99;
+    }
+    
+    &:focus {
+        color: var(--secondary-text-color);
+    }
+}
